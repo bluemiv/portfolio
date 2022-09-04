@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MemoryRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <MemoryRouter initialEntries={['/portfolio']} basename="/portfolio">
-      <App />
-    </MemoryRouter>
+    <RecoilRoot>
+      <MemoryRouter initialEntries={['/portfolio']} basename="/portfolio">
+        <App />
+      </MemoryRouter>
+    </RecoilRoot>
   </React.StrictMode>
 );
 

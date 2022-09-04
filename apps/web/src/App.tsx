@@ -1,13 +1,18 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 import { DefaultLayout } from './layout';
 import { HomePage } from './pages';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from './styles';
+import GlobalStyle from './styles/GlobalStyle';
+import { themeState } from './recoil';
 
 const App: FC = () => {
+  const [theme] = useRecoilState(themeState);
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route index element={<HomePage />} />

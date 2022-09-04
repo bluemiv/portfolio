@@ -1,16 +1,16 @@
 import React, { FC } from 'react';
 import { Outlet } from 'react-router-dom';
-import SideMenu from '../../features/SideMenu';
 import { StyledDefaultLayout } from './StyledDefaultLayout';
+import Header from '../../features/Header';
 
 const DefaultLayout: FC = () => {
   return (
     <StyledDefaultLayout>
-      <SideMenu />
+      <Header />
       <main>
         <Outlet />
-        <footer>footer</footer>
       </main>
+      <footer>footer</footer>
     </StyledDefaultLayout>
   );
 };

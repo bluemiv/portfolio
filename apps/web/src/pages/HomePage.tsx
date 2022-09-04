@@ -1,7 +1,12 @@
 import React, { FC } from 'react';
+import IntroSection from '../features/IntroSection';
 
 const HomePage: FC = () => {
-  return <div>home</div>;
+  return (
+    <>
+      <IntroSection />
+    </>
+  );
 };
 
 export default HomePage;
