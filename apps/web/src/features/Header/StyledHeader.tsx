@@ -1,10 +1,32 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+import type { StyledHeaderProps } from './types';
 
-export const StyledHeader = styled.header`
-  display: none;
+const headerShow = keyframes`
+  from {
+    top: -80px;
+  }
+  to {
+    top: 0;
+  }
+`;
+
+const headerHide = keyframes`
+  from {
+    top: 0;
+  }
+  to {
+    top: -80px;
+  }
+`;
+
+export const StyledHeader = styled.header<StyledHeaderProps>`
   height: 60px;
+  width: 100%;
+  display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  left: 0;
+  animation-timing-function: linear;
 
   .title {
     font-weight: bold;
@@ -14,18 +36,30 @@ export const StyledHeader = styled.header`
     flex: 1;
     display: flex;
     list-style: none;
-    li a {
-    }
   }
 
+  ${({ hidden }) => {
+    if (hidden) {
+      return css`
+        animation: ${headerHide};
+      `;
+    }
+    return css`
+      animation: ${headerShow};
+    `;
+  }}
+
   ${({ theme }) => {
-    const { primaryColor, padding, boxShadow } = theme.style;
+    const { primaryColor, padding, boxShadow, transition } = theme.style;
+
     return css`
       padding: 0 ${padding.md};
       box-shadow: ${boxShadow()};
+      transition: ${transition};
 
       nav ul {
         column-gap: ${padding.md};
+
         li a {
           &:hover {
             color: ${primaryColor.basic};

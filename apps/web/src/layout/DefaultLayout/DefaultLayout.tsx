@@ -11,6 +11,17 @@ const DefaultLayout: FC = () => {
         <Outlet />
       </main>
       <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
+      <footer>footer</footer>
     </StyledDefaultLayout>
   );
 };
