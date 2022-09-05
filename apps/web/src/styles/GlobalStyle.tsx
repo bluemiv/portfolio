@@ -3,6 +3,11 @@ import normalize from 'styled-normalize';
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${normalize}
+
+  body {
+    font-family: 'Maruburi', 'Arial', sans-serif;
+  }
+
   #root {
     font-size: 16px;
 
@@ -34,7 +39,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       a,
       button {
-        transition: ${transition};
+        transition: ${transition()};
       }
     `;
   }}

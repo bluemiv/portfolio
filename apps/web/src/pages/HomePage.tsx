@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
 import IntroSection from '../features/IntroSection';
 
-const HomePage: FC = () => {
+const HomePage = () => {
   return (
     <>
       <IntroSection />

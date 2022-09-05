@@ -1,29 +1,28 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { debounce } from 'lodash';
 import { StyledHeader } from './StyledHeader';
 
-const Header: FC = () => {
+const Header = () => {
   const [scrollY, setScrollY] = useState<number>(0);
-  const [hidden, setHidden] = useState<boolean>(true);
+  const [hide, setHide] = useState<boolean>(true);
 
   useEffect(() => {
-    const scrollHandler = debounce(() => setScrollY(window.scrollY), 100);
+    const scrollHandler = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
 
   useEffect(() => {
-    if (scrollY >= 80 && hidden) {
-      setHidden(false);
+    if (scrollY >= 80 && hide) {
+      setHide(false);
     }
-    if (scrollY < 80 && !hidden) {
-      setHidden(true);
+    if (scrollY < 80 && !hide) {
+      setHide(true);
     }
-  }, [scrollY, hidden]);
+  }, [scrollY, hide]);
 
   return (
-    <StyledHeader hidden={hidden}>
+    <StyledHeader hide={hide}>
       <div className="title">TAEHONG KIM</div>
       <nav>
         <ul>

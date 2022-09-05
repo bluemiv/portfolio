@@ -1,23 +1,5 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 import type { StyledHeaderProps } from './types';
-
-const headerShow = keyframes`
-  from {
-    top: -80px;
-  }
-  to {
-    top: 0;
-  }
-`;
-
-const headerHide = keyframes`
-  from {
-    top: 0;
-  }
-  to {
-    top: -80px;
-  }
-`;
 
 export const StyledHeader = styled.header<StyledHeaderProps>`
   height: 60px;
@@ -26,7 +8,8 @@ export const StyledHeader = styled.header<StyledHeaderProps>`
   align-items: center;
   position: fixed;
   left: 0;
-  animation-timing-function: linear;
+  top: -60px;
+  backdrop-filter: blur(4px);
 
   .title {
     font-weight: bold;
@@ -38,29 +21,30 @@ export const StyledHeader = styled.header<StyledHeaderProps>`
     list-style: none;
   }
 
-  ${({ hidden }) => {
-    if (hidden) {
+  ${({ hide }) => {
+    if (hide) {
       return css`
-        animation: ${headerHide};
+        top: -60px;
       `;
     }
     return css`
-      animation: ${headerShow};
+      top: 0;
     `;
   }}
 
   ${({ theme }) => {
-    const { primaryColor, padding, boxShadow, transition } = theme.style;
+    const { primaryColor, padding, transition, backgroundColorWithAlpha } = theme.style;
 
     return css`
       padding: 0 ${padding.md};
-      box-shadow: ${boxShadow()};
-      transition: ${transition};
+      transition: ${transition('top')};
+      background-color: ${backgroundColorWithAlpha};
 
       nav ul {
         column-gap: ${padding.md};
 
         li a {
+          transition: ${transition('color')};
           &:hover {
             color: ${primaryColor.basic};
           }

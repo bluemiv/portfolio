@@ -86,7 +86,7 @@ const fontSize = {
   xl: '1.75rem',
 };
 
-const transition = '0.2s all ease-in-out';
+const transition = (target: string = 'all', time: number = 0.2) => `${target} ${time}s  ease-in-out`;
 
 export const LIGHT_THEME_MODE: string = 'light';
 export const DARK_THEME_MODE: string = 'dark';
@@ -109,7 +109,7 @@ export const lightTheme = {
     warningColor,
     errorColor,
     backgroundColor: '#ffffff',
-    backgroundColorWithAlpha: 'rgba(255, 255, 255, 0.9)',
+    backgroundColorWithAlpha: 'rgba(255, 255, 255, 0.75)',
     fontColor: '#343a40',
     boxShadow: (color: string = '#f1f3f5') => `0 5px 12px 2px ${color}`,
     borderColor: '#f1f3f5',
@@ -126,7 +126,7 @@ export const darkTheme = {
     warningColor: warningColorForDark,
     errorColor: errorColorForDark,
     backgroundColor: '#343a40',
-    backgroundColorWithAlpha: 'rgba(52, 58, 64, 0.9)',
+    backgroundColorWithAlpha: 'rgba(52, 58, 64, 0.75)',
     fontColor: '#f8f9fa',
     boxShadow: (color: string = '#212529') => `0 5px 12px 2px ${color}`,
     borderColor: '#212529',

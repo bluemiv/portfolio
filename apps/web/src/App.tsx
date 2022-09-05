@@ -6,12 +6,14 @@ import { HomePage } from './pages';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/GlobalStyle';
 import { themeState } from './recoil';
+import FontStyle from './styles/FontStyle';
 
 const App: FC = () => {
   const [theme] = useRecoilState(themeState);
 
   return (
     <ThemeProvider theme={theme}>
+      <FontStyle />
       <GlobalStyle />
       <Routes>
         <Route element={<DefaultLayout />}>

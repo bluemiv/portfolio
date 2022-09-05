@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { StyledIntroSection } from './StyledIntroSection';
 import Profile from './Profile';
 
-const IntroSection: FC = () => {
+const IntroSection = () => {
   return (
     <StyledIntroSection>
       <Profile src="https://avatars.githubusercontent.com/u/26136312?v=4" />

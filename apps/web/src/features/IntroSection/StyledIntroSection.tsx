@@ -6,6 +6,7 @@ export const StyledIntroSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #edf2ff;
 
   .profile-info {
     display: flex;

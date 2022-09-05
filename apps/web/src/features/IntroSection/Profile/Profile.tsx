@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { StyledProfile } from './StyledProfile';
 import type { ProfileProps } from './types';
 
-const Profile: FC<ProfileProps> = ({ src }) => {
+const Profile = ({ src }: ProfileProps) => {
   return (
     <StyledProfile>
       <img src={src} alt="profile" />

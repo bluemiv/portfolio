@@ -1,3 +1,3 @@
 export interface StyledHeaderProps {
-  hidden: boolean;
+  hide: boolean;
 }
