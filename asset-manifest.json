@@ -1,12 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.b7f5ce61.js",
+    "main.js": "/portfolio/static/js/main.85f3ac4e.js",
     "static/js/415.b3387f54.chunk.js": "/portfolio/static/js/415.b3387f54.chunk.js",
+    "static/media/MaruBuri-SemiBold.otf": "/portfolio/static/media/MaruBuri-SemiBold.545e4e474bce723c11b3.otf",
+    "static/media/MaruBuri-Bold.otf": "/portfolio/static/media/MaruBuri-Bold.e68e65eaf57e2f20110b.otf",
+    "static/media/MaruBuri-Light.otf": "/portfolio/static/media/MaruBuri-Light.1da4ede8417559345576.otf",
+    "static/media/MaruBuri-Regular.otf": "/portfolio/static/media/MaruBuri-Regular.ed429efab4a65eebc46e.otf",
+    "static/media/MaruBuri-ExtraLight.otf": "/portfolio/static/media/MaruBuri-ExtraLight.deea571509c116d4f22e.otf",
     "index.html": "/portfolio/index.html",
-    "main.b7f5ce61.js.map": "/portfolio/static/js/main.b7f5ce61.js.map",
+    "main.85f3ac4e.js.map": "/portfolio/static/js/main.85f3ac4e.js.map",
     "415.b3387f54.chunk.js.map": "/portfolio/static/js/415.b3387f54.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.b7f5ce61.js"
+    "static/js/main.85f3ac4e.js"
   ]
 }
