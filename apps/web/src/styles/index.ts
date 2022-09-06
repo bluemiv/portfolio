@@ -111,7 +111,7 @@ export const lightTheme = {
     backgroundColor: '#ffffff',
     backgroundColorWithAlpha: 'rgba(255, 255, 255, 0.75)',
     fontColor: '#343a40',
-    boxShadow: (color: string = '#f1f3f5') => `0 5px 12px 2px ${color}`,
+    boxShadow: (color: string = '#ced4da') => `0 5px 12px 2px ${color}`,
     borderColor: '#f1f3f5',
   },
 };
@@ -125,10 +125,10 @@ export const darkTheme = {
     successColor: successColorForDark,
     warningColor: warningColorForDark,
     errorColor: errorColorForDark,
-    backgroundColor: '#343a40',
-    backgroundColorWithAlpha: 'rgba(52, 58, 64, 0.75)',
+    backgroundColor: '#495057',
+    backgroundColorWithAlpha: 'rgba(73, 80, 87, 0.75)',
     fontColor: '#f8f9fa',
-    boxShadow: (color: string = '#212529') => `0 5px 12px 2px ${color}`,
+    boxShadow: (color: string = '#343a40') => `0 5px 12px 2px ${color}`,
     borderColor: '#212529',
   },
 };

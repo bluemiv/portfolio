@@ -18,8 +18,6 @@ const App: FC = () => {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="home" element={<HomePage />} />
-          <Route path="home" element={<HomePage />} />
         </Route>
       </Routes>
     </ThemeProvider>
